@@ -20,10 +20,40 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
             android:text="@string/app_name"
             android:textSize="34sp" />
+
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/username"
+            android:inputType="textPersonName"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPersonName|textPassword"
+            android:password="true"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn_connexion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:text="@string/connexion" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
