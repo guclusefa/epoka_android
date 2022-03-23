@@ -48,22 +48,47 @@ public class connexion extends Activity {
             data = br.readLine();
         } catch (Exception expt) {
             Log.e("log_tag", "Erreur pendant la récupération des données : " + expt.toString());
-        }
-        ;
+        };
         return (data);
     }
 
-    public void connexion(View v) {
+    public boolean isJSONValid(String test) {
+        try {
+            new JSONObject(test);
+        } catch (JSONException ex) {
+            // edited, to include @Arthur's comment
+            // e.g. in case JSONArray is valid as well...
+            try {
+                new JSONArray(test);
+            } catch (JSONException ex1) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void connexion(View v) throws JSONException {
+        // les variables
         EditText et_id, et_mdp;
         TextView tv_erreur_connexion;
         String urlServiceWeb;
 
+        // les elements
         et_id = (EditText) findViewById(R.id.et_id);
         et_mdp = (EditText) findViewById(R.id.et_mdp);
         tv_erreur_connexion = findViewById(R.id.tv_erreur_connexion);
 
-        urlServiceWeb = "http://localhost/epoka/connexion.php?id=1&mdp=123";
-        tv_erreur_connexion.setText(getServerdataJSON(urlServiceWeb));
+        // url req
+        urlServiceWeb = "http://172.16.75.32/epoka/connexion.php?id="+et_id.getText()+"&mdp="+et_mdp.getText();
+
+        //check si string peut etre un json
+        if (isJSONValid(getServerdataJSON(urlServiceWeb))) {
+            JSONArray array = new JSONArray(getServerdataJSON(urlServiceWeb));
+            JSONObject object = array.getJSONObject(0);
+            tv_erreur_connexion.setText(object.getString("sal_id"));
+        } else {
+            tv_erreur_connexion.setText("pas un json");
+        }
 
         // Intent intent = new Intent(getApplicationContext(), missions_index.class);
         // startActivity(intent);
