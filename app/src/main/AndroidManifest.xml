@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Epoka">
         <activity
-            android:name=".connexion"
+            android:name=".Connexion"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -19,8 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".missions_index" android:screenOrientation="portrait"/>
-        <activity android:name=".missions_ajouter" android:screenOrientation="portrait"/>
+        <activity android:name=".Missions_index" android:screenOrientation="portrait"/>
+        <activity android:name=".Missions_ajouter" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

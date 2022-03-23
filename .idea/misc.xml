@@ -3,13 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/guclu/AndroidStudioProjects/epoka/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3671875" />
-        <entry key="..\:/Users/guclu/AndroidStudioProjects/epoka/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3671875" />
         <entry key="..\:/Users/guclu/AndroidStudioProjects/epoka/app/src/main/res/layout/activity_main.xml" value="0.22056159420289856" />
-        <entry key="..\:/Users/guclu/AndroidStudioProjects/epoka/app/src/main/res/layout/connexion.xml" value="0.35104166666666664" />
-        <entry key="..\:/Users/guclu/AndroidStudioProjects/epoka/app/src/main/res/layout/missions.xml" value="0.35104166666666664" />
-        <entry key="..\:/Users/guclu/AndroidStudioProjects/epoka/app/src/main/res/layout/missions_ajouter.xml" value="0.35104166666666664" />
-        <entry key="..\:/Users/guclu/AndroidStudioProjects/epoka/app/src/main/res/layout/missions_index.xml" value="0.35104166666666664" />
+        <entry key="..\:/Workstation/e5/epoka/app/src/main/res/layout/Connexion.xml" value="0.264" />
+        <entry key="..\:/Workstation/e5/epoka/app/src/main/res/layout/missions_ajouter.xml" value="0.25416666666666665" />
+        <entry key="..\:/Workstation/e5/epoka/app/src/main/res/layout/missions_index.xml" value="0.21822916666666667" />
       </map>
     </option>
   </component>
@@ -18,5 +15,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.21822916666666667" />
+      </ProjectState>
+    </option>
   </component>
 </project>

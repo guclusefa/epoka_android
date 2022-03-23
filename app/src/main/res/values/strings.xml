@@ -2,7 +2,7 @@
     <string name="app_name">epoka</string>
 
     <string-array name="communes">
-        <item name="test">One</item>
-        <item name="test2">one2</item>
+        <item>One</item>
+        <item>one2</item>
     </string-array>
 </resources>
