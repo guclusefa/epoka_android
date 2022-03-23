@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/guclu/AndroidStudioProjects/epoka/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3671875" />
+        <entry key="..\:/Users/guclu/AndroidStudioProjects/epoka/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3671875" />
         <entry key="..\:/Users/guclu/AndroidStudioProjects/epoka/app/src/main/res/layout/activity_main.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/guclu/AndroidStudioProjects/epoka/app/src/main/res/layout/connexion.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/guclu/AndroidStudioProjects/epoka/app/src/main/res/layout/missions.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/guclu/AndroidStudioProjects/epoka/app/src/main/res/layout/missions_ajouter.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/guclu/AndroidStudioProjects/epoka/app/src/main/res/layout/missions_index.xml" value="0.35104166666666664" />
       </map>
     </option>
   </component>

@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">epoka</string>
-    <string name="username">Nom d\'utilisateur</string>
-    <string name="password">Mot de passe</string>
-    <string name="connexion">Connexion</string>
+
+    <string-array name="communes">
+        <item name="test">One</item>
+        <item name="test2">one2</item>
+    </string-array>
 </resources>

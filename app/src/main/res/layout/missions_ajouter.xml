@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".connexion">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,39 +22,49 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20sp"
-            android:text="epoka | connexion"
+            android:text="epoka | nouvelle mission"
             android:textSize="34sp" />
 
         <EditText
-            android:id="@+id/et_id"
+            android:id="@+id/et_debut"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="N° d'indentification"
-            android:inputType="textPersonName"
+            android:hint="Date début"
+            android:inputType="date"
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/et_mdp"
+            android:id="@+id/et_fin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20sp"
             android:ems="10"
-            android:hint="Mot de passe"
-            android:inputType="textPersonName|textPassword"
-            android:password="true"
+            android:hint="Date fin"
+            android:inputType="date"
             android:textSize="24sp" />
 
-        <Button
-            android:id="@+id/btn_connexion"
+        <Spinner
+            android:id="@+id/spinner_lieu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20sp"
-            android:onClick="connexion"
-            android:text="Connexion" />
+            android:ems="10"
+            android:entries="@array/communes"
+            android:hint="Date fin"
+            android:inputType="date"
+            android:textSize="48sp" />
+
+        <Button
+            android:id="@+id/btn_ajouter_mission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:onClick="ajouter"
+            android:text="Ajouter une mission" />
 
         <TextView
-            android:id="@+id/tv_erreur_connexion"
+            android:id="@+id/tv_erreur_ajouter_mission"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20sp"
@@ -64,4 +72,28 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_quiter_mission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:gravity="center"
+            android:onClick="quitter"
+            android:text="Quitter" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

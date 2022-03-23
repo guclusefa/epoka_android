@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".connexion">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,44 +22,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20sp"
-            android:text="epoka | connexion"
+            android:text="epoka | missions"
             android:textSize="34sp" />
 
-        <EditText
-            android:id="@+id/et_id"
+        <TextView
+            android:id="@+id/tv_hello"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="N° d'indentification"
-            android:inputType="textPersonName"
-            android:textSize="24sp" />
-
-        <EditText
-            android:id="@+id/et_mdp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20sp"
-            android:ems="10"
-            android:hint="Mot de passe"
-            android:inputType="textPersonName|textPassword"
-            android:password="true"
+            android:text="Journaliste : Sefa GUCLU"
             android:textSize="24sp" />
 
         <Button
-            android:id="@+id/btn_connexion"
+            android:id="@+id/btn_ajouter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20sp"
-            android:onClick="connexion"
-            android:text="Connexion" />
-
-        <TextView
-            android:id="@+id/tv_erreur_connexion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20sp"
-            android:textSize="24sp" />
+            android:onClick="ajouter"
+            android:text="Ajouter une mission" />
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_quiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:gravity="center"
+            android:onClick="quitter"
+            android:text="Quitter" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
