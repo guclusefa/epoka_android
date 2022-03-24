@@ -41,21 +41,18 @@
                 android:text="Lieu :"
                 android:textSize="24sp" />
 
-            <Spinner
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
                 android:id="@+id/spinner_lieu"
-                android:layout_width="188dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:entries="@array/communes"
-                android:hint="Date fin"
-                android:minHeight="35dp"
-                android:textSize="24pt" />
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/layout_debut"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
             android:gravity="center|start"
             android:orientation="horizontal">
 
@@ -67,19 +64,21 @@
                 android:text="Début :"
                 android:textSize="24sp" />
 
-            <DatePicker
-                android:id="@+id/dp_debut"
-                android:layout_width="230dp"
+            <Button
+                android:id="@+id/btn_debut"
+                style="?android:spinnerStyle"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:calendarViewShown="false"
-                android:clickable="false"
-                android:datePickerMode="spinner" />
+                android:onClick="openDatePicker"
+                android:text="JJ/MM/DDDD"
+                android:textSize="24sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -91,13 +90,15 @@
                 android:text="Fin : "
                 android:textSize="24sp" />
 
-            <DatePicker
-                android:id="@+id/dp_fin"
-                android:layout_width="230dp"
+            <Button
+                android:id="@+id/btn_fin"
+                style="?android:spinnerStyle"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:calendarViewShown="false"
-                android:clickable="false"
-                android:datePickerMode="spinner" />
+                android:onClick="openDatePicker2"
+                android:text="JJ/MM/DDDD"
+                android:textSize="24sp" />
+
         </LinearLayout>
 
         <Button

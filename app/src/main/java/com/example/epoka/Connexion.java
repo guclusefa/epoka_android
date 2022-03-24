@@ -14,6 +14,8 @@ import org.json.JSONObject;
 
 public class Connexion extends Activity {
 
+    MethodesEpoka mEpoka = new MethodesEpoka();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +32,7 @@ public class Connexion extends Activity {
         et_mdp = (EditText) findViewById(R.id.et_mdp);
         tv_erreur_connexion = findViewById(R.id.tv_erreur_connexion);
 
-        // methodes + url
-        MethodesEpoka mEpoka = new MethodesEpoka();
+        // url
         String urlServiceWeb = "connexion.php?id="+et_id.getText()+"&mdp="+et_mdp.getText();
 
         // si connecte (ddata= json)

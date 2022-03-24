@@ -13,6 +13,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Missions_index extends Activity {
+
+    MethodesEpoka mEpoka = new MethodesEpoka();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,8 +41,7 @@ public class Missions_index extends Activity {
         TextView tv_hello;
         tv_hello = findViewById(R.id.tv_hello);
 
-        // methodes + url
-        MethodesEpoka mEpoka = new MethodesEpoka();
+        // url
         String urlServiceWeb = "ficher.php?id="+getSalId();
 
         // si connecte (ddata= json)
