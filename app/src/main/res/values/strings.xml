@@ -2,7 +2,7 @@
     <string name="app_name">epoka</string>
 
     <string-array name="communes">
-        <item>One</item>
-        <item>one2</item>
+        <item>Valmondois (95760)</item>
+        <item>Saint-Clair-sur-Epte (95770)</item>
     </string-array>
 </resources>

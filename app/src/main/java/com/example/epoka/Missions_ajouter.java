@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -30,17 +31,20 @@ public class Missions_ajouter extends Activity {
 
     public void ajouter(View v) throws JSONException {
         // les params
-        EditText et_debut, et_fin;
+        DatePicker dp_debut, dp_fin;
         Spinner spinner_lieu;
         TextView tv_erreur_ajouter_mission;
 
-        et_debut = (EditText) findViewById(R.id.et_debut);
-        et_fin = (EditText) findViewById(R.id.et_fin);
+        dp_debut = (DatePicker) findViewById(R.id.dp_debut);
+        dp_fin = (DatePicker) findViewById(R.id.dp_fin);
         spinner_lieu = findViewById(R.id.spinner_lieu);
         tv_erreur_ajouter_mission = findViewById(R.id.tv_erreur_ajouter_mission);
 
+        String debut = dp_debut.getYear() + "-" + dp_debut.getMonth() + "-" + dp_debut.getDayOfMonth();
+        String fin = dp_fin.getYear() + "-" + dp_fin.getMonth() + "-" + dp_fin.getDayOfMonth();
+
         MethodesEpoka mEpoka = new MethodesEpoka();
-        String urlServiceWeb = "ajouter.php?id="+getSalId()+"&lieu="+spinner_lieu.getSelectedItemPosition() + 1+"&debut="+et_debut.getText()+"&fin="+et_fin.getText();
+        String urlServiceWeb = "ajouter.php?id="+getSalId()+"&lieu="+spinner_lieu.getSelectedItemPosition() + 1+"&debut="+debut +"&fin="+fin;
 
         if (mEpoka.getServerdataJSON(urlServiceWeb).equals("1")) {
             tv_erreur_ajouter_mission.setText("Mission ajouté avec succès");
