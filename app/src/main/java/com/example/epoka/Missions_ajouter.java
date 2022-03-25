@@ -46,7 +46,7 @@ public class Missions_ajouter extends Activity {
         // spinner
         spinner_lieu = findViewById(R.id.spinner_lieu);
         spinner_lieu.setTitle("Choisir une commune");
-        spinner_lieu.setPositiveButton("Valider");
+        spinner_lieu.setPositiveButton("Fermer");
 
         // array
         ArrayList<String> list = new ArrayList<>();
@@ -144,9 +144,11 @@ public class Missions_ajouter extends Activity {
         spinner_lieu = findViewById(R.id.spinner_lieu);
         tv_erreur_ajouter_mission = findViewById(R.id.tv_erreur_ajouter_mission);
 
-        String urlServiceWeb = "ajouter.php?id="+getSalId()+"&lieu="+spinner_lieu.getSelectedItem().toString().substring(0,4) + 1+"&debut="+btn_debut.getText() +"&fin="+btn_fin.getText();
-        Toast.makeText(this, urlServiceWeb, Toast.LENGTH_SHORT).show();
+        // recupere position (id) communes
+        int lieu = spinner_lieu.getSelectedItemPosition() +1;
 
+        String urlServiceWeb = "ajouter.php?id="+getSalId()+"&lieu="+lieu+"&debut="+btn_debut.getText() +"&fin="+btn_fin.getText();
+        // si mission est ajouté
         if (mEpoka.getServerdataJSON(urlServiceWeb).equals("1")) {
             tv_erreur_ajouter_mission.setText("Mission ajouté avec succès");
             Toast.makeText(this, "Mission ajouté avec succès", Toast.LENGTH_SHORT).show();
