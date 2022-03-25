@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="N° d'indentification"
+            android:hint="N° d'identification"
             android:inputType="textPersonName"
             android:textSize="24sp" />
 

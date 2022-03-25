@@ -39,13 +39,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Lieu :"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <com.toptoche.searchablespinnerlibrary.SearchableSpinner
                 android:id="@+id/spinner_lieu"
-                android:layout_width="220dp"
+                android:layout_width="1"
                 android:layout_height="match_parent"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Début :"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btn_debut"
@@ -71,8 +71,9 @@
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:onClick="openDatePicker"
+                android:stateListAnimator="@null"
                 android:text="JJ/MM/DDDD"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -89,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Fin : "
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btn_fin"
@@ -97,8 +98,9 @@
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:onClick="openDatePicker2"
+                android:stateListAnimator="@null"
                 android:text="JJ/MM/DDDD"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
