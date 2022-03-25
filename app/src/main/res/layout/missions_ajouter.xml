@@ -43,7 +43,7 @@
 
             <com.toptoche.searchablespinnerlibrary.SearchableSpinner
                 android:id="@+id/spinner_lieu"
-                android:layout_width="1"
+                android:layout_width="229dp"
                 android:layout_height="match_parent"
                 android:textSize="20sp" />
 
