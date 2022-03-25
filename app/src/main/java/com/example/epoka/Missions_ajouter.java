@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,6 +16,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,7 +32,7 @@ public class Missions_ajouter extends Activity {
 
     MethodesEpoka mEpoka = new MethodesEpoka();
     // spinner
-    Spinner spinner_lieu;
+    SearchableSpinner spinner_lieu;
 
     // les dates
     private DatePickerDialog datePickerDialog, datePickerDialog2;
@@ -42,6 +45,9 @@ public class Missions_ajouter extends Activity {
 
         // spinner
         spinner_lieu = findViewById(R.id.spinner_lieu);
+        spinner_lieu.setTitle("Choisir une commune");
+        spinner_lieu.setPositiveButton("Valider");
+
         // array
         ArrayList<String> list = new ArrayList<>();
         try {
@@ -55,7 +61,7 @@ public class Missions_ajouter extends Activity {
             e.printStackTrace();
         }
 
-        // adapter
+        // afficher la liste
         spinner_lieu.setAdapter(new ArrayAdapter<>(Missions_ajouter.this,
                 android.R.layout.simple_spinner_dropdown_item,list));
 
