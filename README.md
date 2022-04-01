@@ -1,2 +1,1 @@
-# epoka android
-epoka
+# projet epoka
