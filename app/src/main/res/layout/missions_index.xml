@@ -18,13 +18,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tv_title"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20sp"
-            android:text="epoka | missions"
-            android:textSize="34sp" />
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="53dp"
+                android:layout_height="45dp"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20sp"
+                android:layout_weight="1"
+                android:paddingStart="20px"
+                android:text="| missions"
+                android:textSize="34sp" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/tv_hello"
@@ -39,7 +53,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20sp"
             android:onClick="ajouter"
-            android:text="Ajouter une mission" />
+            android:text="Ajouter une mission"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@color/white"/>
 
         <LinearLayout
             android:layout_width="match_parent"
