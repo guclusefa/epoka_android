@@ -98,9 +98,7 @@ public class Missions_ajouter extends Activity {
         int month = cal.get(Calendar.MONTH);
         int day = cal.get(Calendar.DAY_OF_MONTH);
 
-        int style = AlertDialog.THEME_HOLO_LIGHT;
-
-        datePickerDialog = new DatePickerDialog(this, style, dateSetListener, year, month, day);
+        datePickerDialog = new DatePickerDialog(this, dateSetListener, year, month, day);
     }
 
     private void initDatePicker2(){
@@ -119,9 +117,7 @@ public class Missions_ajouter extends Activity {
         int month = cal.get(Calendar.MONTH);
         int day = cal.get(Calendar.DAY_OF_MONTH);
 
-        int style = AlertDialog.THEME_HOLO_LIGHT;
-
-        datePickerDialog2 = new DatePickerDialog(this, style, dateSetListener, year, month, day);
+        datePickerDialog2 = new DatePickerDialog(this, dateSetListener, year, month, day);
     }
 
     public void openDatePicker(View v){
