@@ -18,7 +18,7 @@ import java.util.Calendar;
 public class MethodesEpoka {
     // pour url
     public String getURL(){
-        String url = "http://192.168.1.24/epoka_service_web/";
+        String url = "https://epoka-web.alwaysdata.net/";
         return url;
     }
 
