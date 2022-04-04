@@ -50,7 +50,7 @@ public class Connexion extends Activity {
             intent.putExtra("id", object.getString("sal_id"));
             startActivity(intent);
         } else {
-            // msg d'erreur
+            // msg d'erreur si pas du json
             tv_erreur_connexion.setText(mEpoka.getServerdataJSON(urlServiceWeb));
         }
     }
