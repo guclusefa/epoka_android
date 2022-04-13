@@ -99,7 +99,7 @@ public class Missions_ajouter extends Activity {
 
         datePickerDialog = new DatePickerDialog(this, dateSetListener, year, month, day);
         datePickerDialog2 = new DatePickerDialog(this, dateSetListener, year, month, day);
-    }1
+    }
 
     public void openDatePicker(View v){
         datePickerDialog.show();
