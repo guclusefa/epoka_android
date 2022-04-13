@@ -67,6 +67,7 @@ public class Missions_ajouter extends Activity {
 
         // initialisation datepicker + set date ajd
         initDatePicker();
+        initDatePicker2();
         btn_debut = findViewById(R.id.btn_debut);
         btn_fin = findViewById(R.id.btn_fin);
         btn_debut.setText(mEpoka.getTodaysDate());
@@ -98,6 +99,24 @@ public class Missions_ajouter extends Activity {
         int day = cal.get(Calendar.DAY_OF_MONTH);
 
         datePickerDialog = new DatePickerDialog(this, dateSetListener, year, month, day);
+    }
+
+    private void initDatePicker2(){
+        DatePickerDialog.OnDateSetListener dateSetListener =  new DatePickerDialog.OnDateSetListener()
+        {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                month  = month+1;
+                String date = mEpoka.makeDateString(day, month, year);
+                btn_fin.setText(date);
+            }
+        };
+
+        Calendar cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH);
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+
         datePickerDialog2 = new DatePickerDialog(this, dateSetListener, year, month, day);
     }
 
