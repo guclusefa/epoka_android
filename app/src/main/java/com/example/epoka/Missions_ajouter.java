@@ -81,7 +81,7 @@ public class Missions_ajouter extends Activity {
         return sal_id;
     }
 
-    // les dates
+    // les datess
     private void initDatePicker(){
         DatePickerDialog.OnDateSetListener dateSetListener =  new DatePickerDialog.OnDateSetListener()
         {
